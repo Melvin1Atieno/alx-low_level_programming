@@ -10,7 +10,7 @@
  */
 void jack_bauer(void)
 {
-	int hours,min;
+	int hours, min;
 
 	hours = 0;
 	min   = 0;
