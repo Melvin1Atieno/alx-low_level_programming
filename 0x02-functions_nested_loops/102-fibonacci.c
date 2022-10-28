@@ -16,11 +16,11 @@ int main(void)
 	j = 2;
 	count = 0;
 
-	printf("%ld,", i);
+	printf("%ld, ", i);
 
 	while (count < 48)
 	{
-		printf("%ld,", j);
+		printf("%ld, ", j);
 
 		k = j;
 		j = i + j;
