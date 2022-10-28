@@ -42,6 +42,16 @@ void print_times_table(int n)
 	}
 }
 
+
+/**
+ * formatter - Formats the multiples
+ * @n: he number to format
+ *
+ * Return: void
+ *
+ * description: Prints n formatted
+ */
+
 void formatter(int n)
 {
 	if ((n >= 10) && (n < 100))
