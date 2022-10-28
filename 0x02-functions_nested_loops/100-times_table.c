@@ -25,23 +25,7 @@ void print_times_table(int n)
 
 				if (col != 0)
 				{
-					_putchar(',');
-					_putchar(' ');
-					if ((multi >= 10) && (multi < 100))
-					{
-						_putchar(' ');
-						_putchar(((multi / 10) % 10) + '0');
-					}
-					else if ((multi > 10) && (multi >= 100))
-					{
-						_putchar(((multi / 100) % 10) + '0');
-						_putchar(((multi / 10) % 10) + '0');
-					}
-					else
-					{
-						_putchar(' ');
-						_putchar(' ');
-					}
+					formatter(multi);
 				}
 				_putchar((multi % 10) + '0');
 				col++;
@@ -50,5 +34,35 @@ void print_times_table(int n)
 			col = 0;
 			_putchar('\n');
 		}
+	}
+	if (n == 0)
+	{
+		_putchar('0');
+		_putchar('\n');
+	}
+}
+
+void formatter(int n)
+{
+	if ((n >= 10) && (n < 100))
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(((n / 10) % 10) + '0');
+	}
+	else if ((n > 10) && (n >= 100))
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar(((n / 100) % 10) + '0');
+		_putchar(((n / 10) % 10) + '0');
+	}
+	else
+	{
+		_putchar(',');
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(' ');
 	}
 }
