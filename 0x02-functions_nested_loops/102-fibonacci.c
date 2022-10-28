@@ -12,13 +12,13 @@ int main(void)
 	long int i, j, k;
 	int count;
 
-	i = 0;
-	j = 1;
+	i = 1;
+	j = 2;
 	count = 0;
 
 	printf("%ld,", i);
 
-	while (count < 50)
+	while (count < 48)
 	{
 		printf("%ld,", j);
 
