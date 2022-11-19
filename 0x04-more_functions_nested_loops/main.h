@@ -9,3 +9,5 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
+unsigned long get_next_prime(unsigned long num, unsigned long prime);
+void print_number(int n);
