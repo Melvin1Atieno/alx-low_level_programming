@@ -8,15 +8,15 @@
 char *cap_string(char *str)
 {
 	int len, i;
-	int a[] = {33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
+	int a[] = {' ', ',', ';', '.', '!', '?', '"', '(', ')', '}', '{'};
 
 	len = 0;
 
 	while (*str != '\0')
 	{
-		for (i = 0; i < 13; i++)
+		for (i = 0; i < 11; i++)
 		{
-			if ((int)*str == a[i] || *str == '\n' || *str == '\t' || *str == ' ')
+			if (*str == a[i] || *str == '\n' || *str == '\t')
 			{
 				str++;
 				len++;
