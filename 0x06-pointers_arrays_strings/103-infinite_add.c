@@ -4,7 +4,9 @@
  * infinite_add - Adds two numbers
  * @n1: first number to add
  * @n2: The other number
- * return: returns a pointer to the result
+ * @r: Results buffer
+ * @size_r: size of buffer
+ * Return: returns a pointer to the result
  * Description: A function that adds two numbers
  */
 
