@@ -13,12 +13,28 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	count = 0;
 
-	while (count < n)
+	if (dest > src && dest > src + n)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		count++;
+		dest += (n - 1);
+		src  += (n - 1);
+
+		while (count < n)
+		{
+			*dest = *src;
+			dest--;
+			src--;
+			count++;
+		}
+	}
+	else
+	{
+		while (count < n)
+		{
+			*dest = *src;
+			dest++;
+			src++;
+			count++;
+		}
 	}
 	return (dest);
 }
