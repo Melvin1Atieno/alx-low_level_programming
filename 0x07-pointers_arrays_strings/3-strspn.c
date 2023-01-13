@@ -9,29 +9,36 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int count, slen;
+	unsigned int count, slen, found;
 
 	count = 0;
 	slen = 0;
+	found = 0;
 
-	while (*accept !=  '\0')
+	while (*s !=  '\0')
 	{
-		while (*s != '\0')
+		while (*accept != '\0')
 		{
 			if (*accept == *s)
 			{
 				count++;
+				found = 1;
+				break;
 			}
-			else
-			{
-				return (count);
-			}
-			s++;
+			accept++;
 			slen++;
 		}
-		s -= slen;
-		slen = 0;
-		accept++;
+		if (found == 1)
+		{
+			accept -= slen;
+			slen = 0;
+			s++;
+			found = 0;
+		}
+		else
+		{
+			return (count);
+		}
 	}
 	return (count);
 }
