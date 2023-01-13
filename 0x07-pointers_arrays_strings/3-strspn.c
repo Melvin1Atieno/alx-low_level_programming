@@ -21,18 +21,13 @@ unsigned int _strspn(char *s, char *accept)
 			if (*accept == *s)
 			{
 				count++;
-				s -= slen;
-				break;
 			}
 			s++;
 			slen++;
 		}
+		s -= slen;
 		slen = 0;
 		accept++;
-	}
-	if (*accept == '\0')
-	{
-		count++;
 	}
 	return (count);
 }
